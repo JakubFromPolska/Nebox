@@ -1,0 +1,129 @@
+::selection {
+	background: #3db1fe;
+	color: #fff;
+}
+
+.container3 {
+	align-items: center;
+	justify-content: center;
+	max-width: 1800px;
+	width: 100%;
+	padding: 40px 50px 40px 40px;
+	background: #fff;
+	margin-top: 20px;
+	margin-left: 20px;
+	border-radius: 12px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container3 .topic {
+	font-size: 30px;
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+
+.content3 {
+	display: grid;
+	grid-template-columns: 30% 80%;
+	margin-top: 80px;
+}
+
+.content3 .list {
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+	margin-right: 50px;
+	position: relative;
+}
+
+.content3 .list label {
+	height: 60px;
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 60px;
+	cursor: pointer;
+	padding-left: 25px;
+	transition: all 0.5s ease;
+	color: #333;
+	z-index: 12;
+}
+
+#stazioni:checked ~ .list label.stazioni, #droni:checked ~ .list label.droni,
+	#noleggi:checked ~ .list label.noleggi, #utenti:checked ~ .list label.utenti,
+	#adminn:checked ~ .list label.adminn {
+	color: #fff;
+}
+
+.content3 .list label:hover {
+	color: #3db1fe;
+}
+
+.content3 .slider {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 60px;
+	width: 100%;
+	border-radius: 12px;
+	background: #3db1fe;
+}
+
+#stazioni:checked ~ .list .slider {
+	top: 0;
+}
+
+#droni:checked ~ .list .slider {
+	top: 60px;
+}
+
+#noleggi:checked ~ .list .slider {
+	top: 120px;
+}
+
+#utenti:checked ~ .list .slider {
+	top: 180px;
+}
+
+#adminn:checked ~ .list .slider {
+	top: 240px;
+}
+
+.content3 .text-content {
+	width: 80%;
+	height: 100%;
+}
+
+.content3 .text {
+	display: none;
+}
+
+.content3 .text .title {
+	font-size: 25px;
+	margin-bottom: 10px;
+	font-weight: 500;
+}
+
+.content3 .text p {
+	text-align: justify;
+}
+
+.content3 .text-content .home2 {
+	display: block;
+}
+
+#stazioni:checked ~ .text-content .stazioni, #droni:checked ~
+	.text-content .droni, #noleggi:checked ~ .text-content .noleggi,
+	#utenti:checked ~ .text-content .utenti, #adminn:checked ~
+	.text-content .adminn {
+	display: block;
+}
+
+#droni:checked ~ .text-content .stazioni, #noleggi:checked ~
+	.text-content .stazioni, #utenti:checked ~ .text-content .stazioni,
+	#adminn:checked ~ .text-content .stazioni {
+	display: none;
+}
+
+.content3 input {
+	display: none;
+}

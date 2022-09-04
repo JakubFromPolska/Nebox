@@ -1,0 +1,108 @@
+@charset "ISO-8859-1";
+
+.container2{
+  max-width: 950px;
+  width: 100%;
+  padding: 40px 50px  40px  40px;
+  background: #fff;
+  margin: 0 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.container2 .topic{
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.content .list{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin-right: 50px;
+  position: relative;
+}
+.content .list label{
+  height: 60px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 60px;
+  cursor: pointer;
+  padding-left: 25px;
+  transition: all 0.5s ease;
+  color: #333;
+  z-index: 12;
+}
+#home2:checked ~ .list label.home2,
+#blog:checked ~ .list label.blog,
+#help:checked ~ .list label.help,
+#code:checked ~ .list label.code,
+#about:checked ~ .list label.about{
+  color: #fff;
+}
+.content .list label:hover{
+  color: #6d50e2;
+}
+.content .slider{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  border-radius: 12px;
+  background: #6d50e2;
+  transition: all 0.4s ease;
+}
+#home2:checked ~ .list .slider{
+  top: 0;
+}
+#blog:checked ~ .list .slider{
+  top: 60px;
+}
+#help:checked ~ .list .slider{
+  top: 120px;
+}
+#code:checked ~ .list .slider{
+  top: 180px;
+}
+#about:checked ~ .list .slider{
+  top: 240px;
+}
+.content .text-content{
+  width: 80%;
+  height: 100%;
+}
+.content .text{
+  display: none;
+}
+.content .text .title{
+  font-size: 25px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.content .text p{
+  text-align: justify;
+}
+.content .text-content .home2{
+  display: block;
+}
+#home2:checked ~ .text-content .home2,
+#blog:checked ~ .text-content .blog,
+#help:checked ~ .text-content .help,
+#code:checked ~ .text-content .code,
+#about:checked ~ .text-content .about{
+  display: block;
+}
+#blog:checked ~ .text-content .home2,
+#help:checked ~ .text-content .home2,
+#code:checked ~ .text-content .home2,
+#about:checked ~ .text-content .home2{
+  display: none;
+}
+.content input{
+  display: none;
+}

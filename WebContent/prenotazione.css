@@ -1,0 +1,17 @@
+#pacchetto{
+    padding: 7px;
+    outline: none;
+    border: none;
+    background: #eeeff1;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+#formPrenotazione{
+    width: 300px;
+    height: 500px;
+    display: block;
+    margin: auto;
+   
+    align-items: center;
+}
